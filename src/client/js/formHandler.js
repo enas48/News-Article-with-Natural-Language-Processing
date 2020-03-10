@@ -22,23 +22,23 @@ function handleSubmit(event) {
       //updata ui
       .then(function(data) {
         if (data.polarity === 'positive') {
-          document.getElementById('polarity').innerHTML =
-            'polarity: ' + data.polarity;
-          document.getElementById('image').src = '../images/positive.png';
-          document.getElementById('subjectivity').innerHTML =
-            'subjectivity: ' + data.subjectivity;
+          document.getElementById(
+            'results'
+          ).innerHTML = `<p> polarity:  ${data.polarity}</p>
+                <img id="image" src="../images/positive.png" alt=" ${data.polarity}"/>
+          `;
         } else if (data.polarity === 'neutral') {
-          document.getElementById('polarity').innerHTML =
-            'polarity: ' + data.polarity;
-          document.getElementById('image').src = '../images/natural.png';
-          document.getElementById('subjectivity').innerHTML =
-            'subjectivity: ' + data.subjectivity;
+          document.getElementById(
+            'results'
+          ).innerHTML = `<p> polarity:  ${data.polarity}</p>
+                <img id="image" src='../images/natural.png' alt=" ${data.polarity}"/>
+          `;
         } else if (data.polarity === 'negative') {
-          document.getElementById('polarity').innerHTML =
-            'polarity: ' + data.polarity;
-          document.getElementById('image').src = '../images/negative.png';
-          document.getElementById('subjectivity').innerHTML =
-            'subjectivity: ' + data.subjectivity;
+          document.getElementById(
+            'results'
+          ).innerHTML = `<p> polarity:  ${data.polarity}</p>
+                <img id="image" src='../images/negative.png' alt=" ${data.polarity}"/>
+          `;
         }
       });
   } else {

@@ -37,17 +37,23 @@
                 <section>
                     <strong>Results:</strong>
                     <div id="results">
-                        <div id="polarity"></div>
-                        <img id="image" src="" alt="">
-                        <div id="subjectivity"></div>
                     </div>
-                    <div id="valid"></div>
+
                 </section>
     </main>
 
     <footer>
         <p>copyright &copy 2020</p>
     </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 
 </body>
 
