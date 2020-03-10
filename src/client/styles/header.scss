@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  color: #fff;
+  font-size: 26px;
+  .logo {
+    font-size: 28px;
+    img {
+      width: 64px;
+      border-radius: 10 px;
+    }
+  }
+}
