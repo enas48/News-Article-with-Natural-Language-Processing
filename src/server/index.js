@@ -5,13 +5,12 @@ dotenv.config();
 var path = require('path');
 const express = require('express');
 const mockAPIResponse = require('./mockAPI.js');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-
-var aylien = require('aylien_textapi');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const aylien = require('aylien_textapi');
 
 // set aylien API credentias
-var textapi = new aylien({
+const textapi = new aylien({
   application_id: process.env.API_ID,
   application_key: process.env.API_KEY
 });
